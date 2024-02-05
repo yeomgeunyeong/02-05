@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+
+    <style type="text/css">
+        .parallax_window{
+            min-height: 700px;
+            background:transparent;
+        }
+
+        .height{
+            height: 500px;
+        }
+
+    </style>
+
+
+
+    <script lang="java">
+
+        $(function(){
+
+            $(".parallax_window").each(function(){
+                var bg = $(this).attr("data-image-src");
+                console.log(bg);
+                $(this).css({"background-image": bg});
+            })//each
+
+        })//jquery
+
+    </script>
+
+</head>
+<body>
+    <div class="height">Parallax Test 01</div>
+    <div class="parallax_window" data-parallax="scroll" data-image-src="img/KakaoTalk_20240118_100435875"></div>
+
+    <div class="height">Parallax Test 02</div>
+    <div class="parallax_window" data-parallax="scroll" data-image-src="img/KakaoTalk_20240118_100435875_01"></div>
+
+    <div class="height">Parallax Test 03</div>
+    <div class="parallax_window" data-parallax="scroll" data-image-src="img/KakaoTalk_20240118_100435875_02"></div>
+
+    <div class="height">Parallax Test 04</div>
+    <div class="parallax_window" data-parallax="scroll" data-image-src="img/KakaoTalk_20240118_100435875_05"></div>
+
+    <div class="height">Parallax Test 05</div>
+    <div class="parallax_window" data-parallax="scroll" data-image-src="img/KakaoTalk_20240118_100435875"></div>
+</body>
+</html>

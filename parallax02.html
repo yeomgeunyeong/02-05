@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+        html{
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body{
+            height: 100%;
+            transform-style: preserve-3d;
+            perspective: 1px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        .slide{
+            min-height: 100vh;
+            width: 100vw;
+            padding: 25vh 10%;
+            transform-style: preserve-3d;
+
+        }
+
+        .slide::before{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .slide, .slide::before{
+            content: "";
+            background-position: center center;
+            background-size: cover;
+        }
+
+        #title{
+            background-image: url("img/KakaoTalk_20240118_100435875.jpg");
+            z-index: 2;
+            background-attachment: fixed;
+        }
+
+        #title h1{
+            transform: translateZ(0.25px) scale(0.75);
+            transform-origin: 50% 100%;
+        }
+
+        .header{
+            text-align: center;
+            font-size: 200%;
+            color: white;
+            text-shadow: 0 2px 2px black;
+        }
+
+
+        #slide1::before{
+            background-image: url("img/KakaoTalk_20240118_100435875_01.jpg");
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+        }
+
+        #slide2{
+            background-image: url("img/KakaoTalk_20240118_100435875_02.jpg");
+            z-index: 2;
+        }
+
+
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+
+<body>
+    <div id="title" class="slide header">
+        <h1>Parallax</h1>
+    </div>
+
+    <div id="slide1" class="slide">
+        <div class="title">
+            <h1>slide1</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi impedit dolorum neque sit cumque porro
+                quidem? Unde, quas id reiciendis nam exercitationem cumque tempore eveniet recusandae, fugit alias nihil
+                incidunt!
+            </p>
+        </div>
+    </div><!-- slide1 -->
+
+    <div id="slide2" class="slide">
+        <div class="title">
+            <h1>slide2</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi impedit dolorum neque sit cumque porro
+                quidem? Unde, quas id reiciendis nam exercitationem cumque tempore eveniet recusandae, fugit alias nihil
+                incidunt!
+            </p>
+        </div>
+    </div><!-- slide2 -->
+</body>
+
+</html>
